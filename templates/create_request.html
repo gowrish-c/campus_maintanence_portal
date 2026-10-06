@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+{% block title %}New Maintenance Request{% endblock %}
+{% block content %}
+<div class="form-card">
+    <h2>Submit Maintenance Request</h2>
+    <p class="muted">Describe the problem clearly so the administrator can assign it.</p>
+    <form method="POST">
+        <div class="grid-2">
+            <div>
+                <label>Problem Title</label>
+                <input type="text" name="title" maxlength="150" required placeholder="Example: Classroom fan not working">
+            </div>
+            <div>
+                <label>Category</label>
+                <select name="category" required>
+                    <option value="">Select category</option>
+                    <option>Electrical</option>
+                    <option>Plumbing</option>
+                    <option>Internet / Network</option>
+                    <option>Furniture</option>
+                    <option>Cleaning</option>
+                    <option>Air Conditioning</option>
+                    <option>Other</option>
+                </select>
+            </div>
+        </div>
+
+        <label>Location</label>
+        <input type="text" name="location" required placeholder="Example: Block A - Room 204">
+
+        <label>Description</label>
+        <textarea name="description" rows="6" required placeholder="Describe the problem..."></textarea>
+
+        <div class="actions">
+            <button class="btn primary" type="submit">Submit Request</button>
+            <a class="btn secondary" href="{{ url_for('student_dashboard') }}">Cancel</a>
+        </div>
+    </form>
+</div>
+{% endblock %}

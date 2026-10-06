@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block title %}Login{% endblock %}
+{% block content %}
+<div class="form-card small">
+    <h2>Login</h2>
+    <p class="muted">Access your campus maintenance dashboard.</p>
+    <form method="POST">
+        <label>Email</label>
+        <input type="email" name="email" required placeholder="you@example.com">
+
+        <label>Password</label>
+        <input type="password" name="password" required placeholder="Password">
+
+        <button class="btn primary full" type="submit">Login</button>
+    </form>
+    <p class="center">New student? <a href="{{ url_for('register') }}">Create an account</a></p>
+</div>
+{% endblock %}

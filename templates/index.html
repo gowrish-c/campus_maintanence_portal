@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% block title %}Campus Maintenance Portal{% endblock %}
+{% block content %}
+<section class="hero">
+    <div>
+        <span class="badge">WEB TECHNOLOGY LAB PROJECT</span>
+        <h1>Campus Maintenance Portal</h1>
+        <p>Report campus problems, track requests and manage maintenance work from one simple portal.</p>
+        <div class="actions">
+            <a class="btn primary" href="{{ url_for('login') }}">Login</a>
+            <a class="btn secondary" href="{{ url_for('register') }}">Student Registration</a>
+        </div>
+    </div>
+</section>
+
+<section class="features">
+    <div class="feature-card">
+        <h3>Student Requests</h3>
+        <p>Students can report electrical, plumbing, classroom, internet and other campus problems.</p>
+    </div>
+    <div class="feature-card">
+        <h3>Admin Management</h3>
+        <p>Administrators can approve, assign and update maintenance requests.</p>
+    </div>
+    <div class="feature-card">
+        <h3>Live Status</h3>
+        <p>Dashboards automatically check the database for updated request status.</p>
+    </div>
+</section>
+{% endblock %}

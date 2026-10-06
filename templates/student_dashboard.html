@@ -1,0 +1,124 @@
+{% extends "base.html" %}
+
+{% block title %}
+Student Dashboard
+{% endblock %}
+
+
+{% block content %}
+
+<div class="page-header">
+
+    <div>
+
+        <span class="badge">
+            STUDENT
+        </span>
+
+        <h1>
+            My Maintenance Requests
+        </h1>
+
+        <p class="muted">
+            Your request status is checked automatically.
+        </p>
+
+    </div>
+
+
+    <a class="btn primary" href="{{ url_for('create_request') }}">
+        + New Request
+    </a>
+
+</div>
+
+
+<!-- =========================================================
+     STUDENT STATISTICS
+     ========================================================= -->
+
+<div id="studentStats" class="stats">
+
+    <div class="stat">
+
+        <strong id="studentTotal">
+            0
+        </strong>
+
+        <span>
+            Total
+        </span>
+
+    </div>
+
+
+    <div class="stat">
+
+        <strong id="studentPending">
+            0
+        </strong>
+
+        <span>
+            Pending
+        </span>
+
+    </div>
+
+
+    <div class="stat">
+
+        <strong id="studentActive">
+            0
+        </strong>
+
+        <span>
+            Active
+        </span>
+
+    </div>
+
+
+    <div class="stat">
+
+        <strong id="studentCompleted">
+            0
+        </strong>
+
+        <span>
+            Completed
+        </span>
+
+    </div>
+
+</div>
+
+
+<!-- =========================================================
+     STUDENT REQUESTS
+     ========================================================= -->
+
+<div id="studentRequests" class="request-grid">
+
+    <div class="loading">
+        Loading requests...
+    </div>
+
+</div>
+
+
+{% endblock %}
+
+
+{% block scripts %}
+
+<!--
+    DO NOT add another loadStudentRequests() function here.
+
+    The complete student dashboard JavaScript is handled by:
+
+        static/js/app.js
+
+    This prevents duplicate polling and conflicting functions.
+-->
+
+{% endblock %}

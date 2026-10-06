@@ -1,0 +1,150 @@
+{% extends "base.html" %}
+
+{% block title %}Admin Dashboard{% endblock %}
+
+{% block content %}
+
+<div class="page-header">
+
+    <div>
+
+        <span class="badge admin-badge">
+            ADMIN
+        </span>
+
+        <h1>
+            Maintenance Management
+        </h1>
+
+        <p class="muted">
+            Approve, assign and update campus maintenance requests.
+        </p>
+
+    </div>
+
+</div>
+
+
+<!-- =========================================================
+     ADMIN STATISTICS
+     ========================================================= -->
+
+<div id="adminStats" class="stats">
+
+    <div class="stat">
+        <strong id="adminTotal">0</strong>
+        <span>Total</span>
+    </div>
+
+    <div class="stat">
+        <strong id="adminPending">0</strong>
+        <span>Pending</span>
+    </div>
+
+    <div class="stat">
+        <strong id="adminActive">0</strong>
+        <span>Active</span>
+    </div>
+
+    <div class="stat">
+        <strong id="adminCompleted">0</strong>
+        <span>Completed</span>
+    </div>
+
+</div>
+
+
+<!-- =========================================================
+     REQUEST TABLE
+     ========================================================= -->
+
+<div class="table-card">
+
+    <div class="table-head">
+
+        <h2>
+            All Requests
+        </h2>
+
+        <span class="live">
+            <i></i>
+            Database connected
+        </span>
+
+    </div>
+
+
+    <div class="table-wrap">
+
+        <table>
+
+            <thead>
+
+                <tr>
+
+                    <th>
+                        Student
+                    </th>
+
+                    <th>
+                        Problem
+                    </th>
+
+                    <th>
+                        Location
+                    </th>
+
+                    <th>
+                        Status
+                    </th>
+
+                    <th>
+                        Assign
+                    </th>
+
+                    <th>
+                        Admin Comment
+                    </th>
+
+                    <th>
+                        Action
+                    </th>
+
+                </tr>
+
+            </thead>
+
+
+            <tbody id="adminRequests">
+
+                <tr>
+
+                    <td colspan="7" class="center">
+                        Loading...
+                    </td>
+
+                </tr>
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+</div>
+
+{% endblock %}
+
+
+{% block scripts %}
+
+<!--
+    IMPORTANT:
+
+    Do NOT put another loadAdminRequests(),
+    updateRequest(), or setInterval() here.
+
+    static/js/app.js handles the Admin dashboard.
+-->
+
+{% endblock %}
